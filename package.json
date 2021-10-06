@@ -1,0 +1,23 @@
+{
+  "name": "smart-brain-api",
+  "version": "1.0.0",
+  "description": "Smart Brain Api",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "yarn start --prefix client",
+    "dev": "concurrently \"yarn run server \" \"yarn run client\""
+  },
+  "repository": "https://github.com/TAKANOME-DEV/smart-brain-test.git",
+  "author": "TAKANOME-DEV <79809121+TAKANOME-DEV@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^6.3.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "knex": "^0.95.11",
+    "nodemon": "^2.0.13",
+    "pg": "^8.7.1"
+  }
+}
