@@ -1,9 +1,19 @@
 const express = require("express");
+const cors = require("cors");
 require("dotenv").config();
+
+const users = require("./routes/users");
+const register = require("./routes/register");
+const signin = require("./routes/signin");
 
 const app = express();
 
-app.get("/", (req, res) => res.send("Hello"));
+app.use(express.json());
+app.use(cors());
+
+app.use(users);
+app.use(register);
+app.use(signin);
 
 app.listen(
   process.env.PORT,
