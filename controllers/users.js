@@ -1,8 +1,7 @@
 const db = require("../db");
-const bcrypt = require("bcryptjs");
 
 // @desc method: GET / Get Users
-// @route /users
+// @route /
 // @access Public
 
 exports.handleGetUsers = async (req, res) => {
