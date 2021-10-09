@@ -10,8 +10,8 @@ exports.handleUpdateEntries = async (req, res) => {
 
     await db("users")
       .where({ id })
-      .returning("entries")
       .increment("entries")
+      .returning("entries")
       .then((entry) => res.json(parseInt(entry[0])));
   } catch (err) {
     res.status(400).json("Something Went Wrong");

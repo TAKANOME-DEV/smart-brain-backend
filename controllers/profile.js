@@ -10,9 +10,15 @@ exports.handleGetProfile = async (req, res) => {
 
     await db("users")
       .where({ id })
-      .then((user) => res.json(user[0]));
+      .then((user) => {
+        if (user.length) {
+          res.json(user[0]);
+        } else {
+          res.status(400).json("User Not Found");
+        }
+      });
   } catch (err) {
-    res.status(400).json("Something Went Wrong");
+    res.status(400).json("Error Getting User");
     console.error(err);
   }
 };
