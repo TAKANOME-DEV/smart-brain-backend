@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const users = require("./routes/users");
-const register = require("./routes/register");
+const signup = require("./routes/signup");
 const signin = require("./routes/signin");
 const image = require("./routes/image");
 const profile = require("./routes/profile");
@@ -12,9 +12,8 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-
 app.use(users);
-app.use(register);
+app.use(signup);
 app.use(signin);
 app.use(image);
 app.use(profile);

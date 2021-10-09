@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 // @route /register
 // @access Public
 
-exports.handleUserRegister = async (req, res, next) => {
+exports.handleUserSignup = async (req, res, next) => {
   try {
     const { username, email, password } = req.body;
 
@@ -37,7 +37,7 @@ exports.handleUserRegister = async (req, res, next) => {
         .catch((err) => res.status(400).json("Something Went Wrong"));
     });
   } catch (err) {
-    res.status(400).json("Unable To Register");
+    res.status(400).json("Unable To Sign up");
     console.error(err);
   }
 };
