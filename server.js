@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const apicache = require("apicache");
 require("dotenv").config();
 
 const users = require("./routes/users");
@@ -12,8 +13,11 @@ const deleteUser = require("./routes/deleteUser");
 
 const app = express();
 
+let cache = apicache.middleware;
+
 app.use(express.json());
 app.use(cors());
+app.use(cache("2 minutes"));
 app.use(users);
 app.use(signup);
 app.use(signin);
