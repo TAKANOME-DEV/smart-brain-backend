@@ -7,11 +7,3 @@
 > ## ExpressJS
 >
 > ## PostgreSQL
-
-### Install Dependencies
-
-`yarn` Or `yarn install`
-
-### Run Server
-
-`yarn run server`
