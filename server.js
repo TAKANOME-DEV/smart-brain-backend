@@ -18,6 +18,7 @@ let cache = apicache.middleware;
 app.use(express.json());
 app.use(cors());
 app.use(cache("2 minutes"));
+app.disable("x-powered-by");
 app.use(users);
 app.use(signup);
 app.use(signin);
