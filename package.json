@@ -5,20 +5,26 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "server": "nodemon server"
+    "server": "nodemon server",
+    "test": "snyk test"
   },
   "repository": "https://github.com/TAKANOME-DEV/smart-brain-test.git",
   "author": "TAKANOME-DEV <79809121+TAKANOME-DEV@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
     "apicache": "^1.6.3",
+    "axios": "^0.24.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-rate-limit": "^5.5.0",
+    "helmet": "^4.6.0",
     "knex": "^0.95.11",
-    "needle": "^3.0.0",
-    "nodemon": "^2.0.13",
     "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14",
+    "snyk": "^1.745.0"
   }
 }

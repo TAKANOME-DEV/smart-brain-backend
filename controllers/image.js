@@ -8,13 +8,13 @@ exports.handleUpdateEntries = async (req, res) => {
   try {
     const { id } = req.body;
 
-    await db("users")
+    const entry = await db("users")
       .where({ id })
       .increment("entries")
-      .returning("entries")
-      .then((entry) => res.json(parseInt(entry[0])));
+      .returning("entries");
+    return res.json(entry[0]);
   } catch (err) {
-    res.status(400).json("Something Went Wrong");
+    res.status(500).json("Internal Server Error");
     console.error(err);
   }
 };

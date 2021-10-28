@@ -6,8 +6,10 @@ const db = require("../db");
 
 exports.handleGetUsers = async (req, res) => {
   try {
-    await db("users").then((users) => res.json(users));
+    const users = await db("users");
+    return res.json(users);
   } catch (err) {
-    res.status(400).json("Something Went Wrong");
+    res.status(400).json("Something Went Wrong, Please Try Again");
+    console.error(err);
   }
 };
