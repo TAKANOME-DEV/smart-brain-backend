@@ -1,8 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
-const apicache = require("apicache");
-const rateLimit = require("express-rate-limit");
+// const apicache = require("apicache");
+// const rateLimit = require("express-rate-limit");
 require("dotenv").config();
 
 const users = require("./routes/users");
@@ -14,21 +14,21 @@ const deleteUser = require("./routes/deleteUser");
 
 const app = express();
 
-let cache = apicache.middleware;
+// let cache = apicache.middleware;
 
-const limiter = rateLimit({
-  windowMs: 60 * 1000,
-  max: 1,
-});
+// const limiter = rateLimit({
+//   windowMs: 60 * 1000,
+//   max: 1,
+// });
 
 app.use(express.json());
 app.use(cors());
 app.use(helmet());
-app.use(cache("2 minutes"));
-app.set("trust proxy", 1);
+// app.use(cache("2 minutes"));
+// app.set("trust proxy", 1);
 app.use(users);
 app.use(signup);
-app.use(signin, limiter);
+app.use(signin);
 app.use(image);
 app.use(profile);
 app.use(deleteUser);
