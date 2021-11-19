@@ -8,8 +8,6 @@
     "server": "nodemon server",
     "test": "snyk test"
   },
-  "repository": "https://github.com/TAKANOME-DEV/smart-brain-test.git",
-  "author": "TAKANOME-DEV <79809121+TAKANOME-DEV@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
     "apicache": "^1.6.3",
@@ -24,6 +22,9 @@
     "pg": "^8.7.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "husky": "^7.0.4",
     "nodemon": "^2.0.14",
     "snyk": "^1.745.0"
   }
