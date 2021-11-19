@@ -1,7 +1,5 @@
 # Smart Brain Backend
 
-> ## NodeJS
->
 > ## ExpressJS
 >
 > ## PostgreSQL
