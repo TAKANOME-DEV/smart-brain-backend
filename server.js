@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(helmet());
 
 const allowlist = [
-  "https://takanome-smart-brain.netlify.app/",
+  "https://takanome-smart-brain.netlify.app",
   process.env.LOCAL_CORS,
 ];
 const corsOptions = {
