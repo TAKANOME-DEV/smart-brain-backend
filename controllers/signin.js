@@ -1,9 +1,11 @@
 const db = require("../db");
 const bcrypt = require("bcryptjs");
 
-// @desc method: POST / Login User
-// @route /login
-// @access Public
+/**
+ * @desc method: POST / Login User
+ * @route /login
+ * @access Public
+ */
 
 exports.handleUserLogin = async (req, res) => {
   try {

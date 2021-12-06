@@ -4,4 +4,4 @@ const { handleDeleteUser } = require("../controllers/deleteUser");
 
 router.route("/delete/:id").delete(handleDeleteUser);
 
-module.exports = router;
+// module.exports = router;

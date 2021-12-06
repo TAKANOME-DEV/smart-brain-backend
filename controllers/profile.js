@@ -1,8 +1,10 @@
 const db = require("../db");
 
-// @desc GET / Get User Profile
-// @route /profile/:id
-// @access Public
+/**
+ * @desc GET / Get User Profile
+ * @route /profile/:id
+ * @access Public
+ */
 
 exports.handleGetProfile = async (req, res) => {
   try {

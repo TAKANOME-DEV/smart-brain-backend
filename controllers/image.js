@@ -1,8 +1,10 @@
 const db = require("../db");
 
-// @desc PUT / Update User Entries
-// @route /image
-// @access Public
+/**
+ * @desc PUT / Update User Entries
+ * @route /image
+ * @access Public
+ */
 
 exports.handleUpdateEntries = async (req, res) => {
   try {

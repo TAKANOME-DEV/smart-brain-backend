@@ -11,13 +11,15 @@ const db = knex({
   },
 });
 
-//  Local connection :
-
-// connection: {
-//   host: "127.0.0.1",
-//   user: "your_user_name",
-//   password: "your_db_password",
-//   database: "your_db_name",
-// },
+/**  
+ ** Local connection :
+ 
+ *? connection: {
+ *?   host: "127.0.0.1",
+ *?   user: "your_user_name",
+ *?   password: "your_db_password",
+ *?   database: "your_db_name",
+ *? }
+*/
 
 module.exports = db;

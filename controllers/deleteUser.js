@@ -1,8 +1,10 @@
 const db = require("../db");
 
-// @desc method: DELETE / Delete User
-// @route /delete/:id
-// @access Public
+/**
+ * @desc method: DELETE / Delete User
+ * @route /delete/:id
+ * @access Public
+ */
 
 exports.handleDeleteUser = async (req, res) => {
   try {

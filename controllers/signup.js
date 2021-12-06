@@ -1,9 +1,11 @@
 const db = require("../db");
 const bcrypt = require("bcryptjs");
 
-// @desc POST register a user
-// @route /register
-// @access Public
+/**
+ * @desc POST register a user
+ * @route /register
+ * @access Public
+ */
 
 exports.handleUserSignup = async (req, res) => {
   try {
