@@ -16,7 +16,7 @@ exports.handleUpdateEntries = async (req, res) => {
       .returning("entries");
     return res.json(entry[0]);
   } catch (err) {
-    res.status(500).json("Internal Server Error");
-    console.error(err);
+    console.log(err);
+    return res.status(500).json("Internal Server Error");
   }
 };

@@ -11,9 +11,8 @@ exports.handleUserLogin = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    if (!email || !password) {
+    if (!email || !password)
       return res.status(400).json("Incorrect Form Submission");
-    }
 
     const response = await db("email", "hash").from("login").where({ email });
     if (response.length) {
@@ -28,36 +27,7 @@ exports.handleUserLogin = async (req, res) => {
       return res.status(400).json("Email Or Password Invalid");
     }
   } catch (error) {
-    res.status(400).json("Something Went Wrong");
     console.log(error);
+    return res.status(400).json("Something Went Wrong");
   }
 };
-
-// exports.handleUserLogin = (req, res) => {
-//   try {
-//     const { email, password } = req.body;
-
-//     if (!email || !password) {
-//       return res.status(400).json("Incorrect Form Submission");
-//     }
-
-//     db("email", "hash")
-//       .from("login")
-//       .where({ email })
-//       .then((data) => {
-//         const isValid = bcrypt.compareSync(password, data[0].hash);
-
-//         if (isValid) {
-//           return db("users")
-//             .where({ email })
-//             .then((user) => res.json(user[0]))
-//             .catch((err) => res.status(404).json("Email Or Password Invalid"));
-//         } else {
-//           return res.status(404).json("Email Or Password Invalid");
-//         }
-//       });
-//   } catch (error) {
-//     res.status(404).json("Email Or Password Invalid");
-//     console.error(error);
-//   }
-// };
