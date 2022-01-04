@@ -14,7 +14,7 @@ exports.handleUserSignup = async (req, res) => {
     if (!username || !email || !password)
       return res.status(400).json("Incorrect Form Submission");
 
-    const hash = bcrypt.hashSync(password);
+    const hash = await bcrypt.hash(password, 10);
 
     await db.transaction(async (trx) => {
       const user = await trx("users").where({ email });

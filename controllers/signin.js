@@ -16,7 +16,7 @@ exports.handleUserLogin = async (req, res) => {
 
     const response = await db("email", "hash").from("login").where({ email });
     if (response.length) {
-      const isValid = bcrypt.compareSync(password, response[0].hash);
+      const isValid = await bcrypt.compare(password, response[0].hash);
       if (isValid) {
         const user = await db("users").where({ email });
         return res.json(user[0]);
