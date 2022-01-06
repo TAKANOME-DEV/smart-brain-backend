@@ -6,7 +6,6 @@
   "private": "true",
   "author": "takanome_dev",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "start": "node server",
     "server": "nodemon server",
     "test": "snyk test"
