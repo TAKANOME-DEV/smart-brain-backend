@@ -1,3 +1,15 @@
+# dependencies
 /node_modules
+
+# environment variables
 .env
+
+# folder
+.vscode
+
+# log files
+logfile.log
+exceptions.log
+
+# snyk cache
 .dccache

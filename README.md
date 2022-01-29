@@ -1,7 +1,13 @@
-# Smart Brain Backend
+# Smart Brain Server
 
-> ## ExpressJS
->
-> ## PostgreSQL
+An Express REST API service and PostgreSQL database for [**takanome-smart-brain.netlify.app**](https://takanome-smart-brain.netlify.app/).
 
-# View Frontend : [Smart Brain Fontend](https://github.com/TAKANOME-DEV/smart-brain-frontend)
+See [**smart-brain-client**](https://github.com/aTmb405/breads-client) for front end code.
+
+## Tech Stack
+
+- **NodeJS**
+
+- **Express**
+
+- **PostgreSQL**

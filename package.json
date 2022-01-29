@@ -1,35 +1,42 @@
 {
-  "name": "smart-brain-backend",
-  "version": "1.0.0",
-  "description": "Smart Brain Backend",
-  "main": "server.js",
-  "private": "true",
-  "author": "takanome_dev",
-  "scripts": {
-    "start": "node server",
-    "server": "nodemon server",
-    "test": "snyk test"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "axios": "^0.24.0",
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.2",
-    "helmet": "^5.0.1",
-    "knex": "^0.95.15",
-    "pg": "^8.7.1"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^16.0.1",
-    "@commitlint/config-conventional": "^16.0.0",
-    "@types/node": "*",
-    "husky": "^7.0.4",
-    "nodemon": "^2.0.15",
-    "snyk": "^1.813.0"
-  },
-  "peerDependencies": {
-    "@types/node": "*"
-  }
+	"name": "smart-brain-server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"private": "true",
+	"author": "takanome_dev",
+	"engines": {
+		"node": "16.13.2",
+		"pnpm": "6.27.1"
+	},
+	"scripts": {
+		"start": "node server",
+		"dev": "nodemon server",
+		"test": "snyk test"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"axios": "^0.24.0",
+		"bcryptjs": "^2.4.3",
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.2",
+		"helmet": "^5.0.1",
+		"jsonwebtoken": "^8.5.1",
+		"knex": "^0.95.15",
+		"node-fetch": "2",
+		"pg": "^8.7.1",
+		"winston": "^3.5.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^16.0.1",
+		"@commitlint/config-conventional": "^16.0.0",
+		"@types/node": "*",
+		"husky": "^7.0.4",
+		"nodemon": "^2.0.15",
+		"snyk": "^1.813.0"
+	},
+	"peerDependencies": {
+		"@types/node": "*"
+	}
 }
