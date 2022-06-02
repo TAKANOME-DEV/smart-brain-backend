@@ -6,7 +6,7 @@
 	"private": "true",
 	"author": "takanome_dev",
 	"engines": {
-		"node": "16.13.2",
+		"node": "16.15.1",
 		"pnpm": "6.27.1"
 	},
 	"scripts": {
